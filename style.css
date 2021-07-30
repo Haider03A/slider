@@ -13,15 +13,18 @@
 .slides {
   display: flex;
   height: 100%;
+  
 }
 .slide {
   min-width: 100%;
   position: relative;
+  background-color: brown;
+  padding: 100px;
+  color: aliceblue;
+  font-size: 30px;
+
 }
-.slide img {
-  width: 100%;
-  height: 100%;
-}
+
 .slide-controls {
   position: absolute;
   top: 50%;

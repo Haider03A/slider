@@ -2,7 +2,7 @@ const slideContainer = document.querySelector('.container');
 const slide = document.querySelector('.slides');
 const nextBtn = document.getElementById('next-btn');
 const prevBtn = document.getElementById('prev-btn');
-const interval = 3000;
+const interval = 2000;
 
 let slides = document.querySelectorAll('.slide');
 let index = 1;
@@ -19,9 +19,7 @@ slide.prepend(lastClone);
 
 const slideWidth = slides[index].clientWidth;
 
-slide.style.transform = `translateX(${-slideWidth * index}px)`;
-
-console.log(slides);
+slide.style.transform = `translateX(${-slideWidth * 1}px)`;
 
 const startSlide = () => {
   slideId = setInterval(() => {
@@ -61,9 +59,9 @@ const moveToPreviousSlide = () => {
   slide.style.transform = `translateX(${-slideWidth * index}px)`;
 };
 
-slideContainer.addEventListener('mouseenter', () => {
+/* slideContainer.addEventListener('mouseenter', () => {
   clearInterval(slideId);
-});
+}); */
 
 slideContainer.addEventListener('mouseleave', startSlide);
 nextBtn.addEventListener('click', moveToNextSlide);
