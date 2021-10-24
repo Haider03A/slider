@@ -21,12 +21,6 @@ const slideWidth = slides[index].clientWidth;
 
 slide.style.transform = `translateX(${-slideWidth * 1}px)`;
 
-const startSlide = () => {
-  slideId = setInterval(() => {
-    moveToNextSlide();
-  }, interval);
-};
-
 const getSlides = () => document.querySelectorAll('.slide');
 
 slide.addEventListener('transitionend', () => {
@@ -59,11 +53,6 @@ const moveToPreviousSlide = () => {
   slide.style.transform = `translateX(${-slideWidth * index}px)`;
 };
 
-/* slideContainer.addEventListener('mouseenter', () => {
-  clearInterval(slideId);
-}); */
-
-slideContainer.addEventListener('mouseleave', startSlide);
 nextBtn.addEventListener('click', moveToNextSlide);
 prevBtn.addEventListener('click', moveToPreviousSlide);
 
